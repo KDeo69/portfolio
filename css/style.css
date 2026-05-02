@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Verdana;
+    background-color: #0b0617;
+    color: #f6f6f6;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/*gradient*/
+
+.image-gradient{
+    position:absolute;
+    top: 0;
+    right: 0;
+    opacity: 1.5;
+    z-index: -1;
+}
+
+.layer-blur{
+    height: 0;
+    width: 50rem;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    box-shadow: 0 0 900px 15px #f0efce;
+    rotate: -30deg;
+    z-index: -1;
+}
