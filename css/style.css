@@ -76,3 +76,19 @@ nav a{
 nav a:hover{
     color:#3f2e67
 }
+
+
+/*bento*/
+.box{
+    background-color: #f6f6f6;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    gap: 1em;
+    grid-template-areas: 
+    "box-1 box-1 box-4 box-2"
+    "box-5 box-3 box-3 box-2";
+}
