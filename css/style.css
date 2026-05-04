@@ -28,7 +28,7 @@ body{
     position: absolute;
     top: 45%;
     right: 10%;
-    box-shadow: 0 0 900px 15px #f0efce;
+    box-shadow: 0 0 900px 15px #ffffff;
     rotate: -30deg;
     z-index: -1;
 }
@@ -54,9 +54,25 @@ header{
 }
 
 header h1{
+    display: flex;
     margin: 0;
     font-size: 3rem;
     font-weight: 300;
+}
+
+/*navigation bar*/
+@media(max-width:56em){
+
+}
+
+/*back button*/
+.navback{
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+button{
+    border-radius: 12px;
 }
 
 nav{
@@ -80,9 +96,77 @@ nav a:hover{
 
 
 /*bento*/
-.box{
+
+/*replace the box methods with this when image is available:
+    background-image: 
+    linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+    url("images/bg1.jpg");
+
+*/
+
+.box {
+    display: flex;            
+    align-items: center;
+    justify-content: center;
+
+    height: 200px;             
+    text-decoration: none;
+    color: white;
     background-color: #3f8678;
+
+    transition: 0.3s ease;
 }
+
+/* hover effect */
+.box:hover {
+    background-color: #192825;
+    transform: scale(1.03);
+}
+
+.box-1{
+    background-color: #3f8678;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.box-2{
+    background-color: #3f8678;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.box-3{
+    background-color: #3f8678;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.3s ease;
+}
+.box-4{
+    background-color: #3f8678;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.3s ease;
+}
+.box-5{
+    background-color: #3f8678;
+    display: grid;
+    place-content: center;
+}
+.box-1:hover {
+    background-color: #142a25;
+}
+.box-2:hover {
+    background-color: #142a25;
+}
+.box-3:hover {
+    background-color: #142a25;
+}
+.box-4:hover {
+    background-color: #142a25;
+}
+
 
 .grid-container{
     justify-content: right;
