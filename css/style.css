@@ -36,6 +36,7 @@ body{
 /*nav bar*/
 
 .container{
+    display: flexbox;
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
@@ -80,15 +81,36 @@ nav a:hover{
 
 /*bento*/
 .box{
-    background-color: #f6f6f6;
+    background-color: #3f8678;
 }
 
 .grid-container{
+    justify-content: right;
+    padding-right: 4%;
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
     gap: 1em;
     grid-template-areas: 
-    "box-1 box-1 box-4 box-2"
-    "box-5 box-3 box-3 box-2";
+    "box-1 box-1 box-5 box-2"
+    "box-4 box-3 box-3 box-2";
 }
+
+@media(max-width: 56em){
+    .grid-container{
+        grid-template-areas: 
+        "box-1 box-1 box-2"
+        "box-3 box-5 box-2"
+        "box-3 box-4 box-4";
+    }
+} 
+
+@media(max-width: 42em){
+    .grid-container{
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-3"
+        "box-5 box-3"
+        "box-4 box-4";
+    }
+} 
