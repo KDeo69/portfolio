@@ -108,8 +108,7 @@ nav a:hover{
     display: flex;            
     align-items: center;
     justify-content: center;
-
-    height: 200px;             
+            
     text-decoration: none;
     color: white;
     background-color: #3f8678;
@@ -169,7 +168,7 @@ nav a:hover{
 
 
 .grid-container{
-    justify-content: right;
+    justify-content: end;
     padding-right: 4%;
     display: grid;
     grid-auto-columns: 200px;
@@ -182,6 +181,7 @@ nav a:hover{
 
 @media(max-width: 56em){
     .grid-container{
+        grid-template-columns: repeat(3, 200px);
         grid-template-areas: 
         "box-1 box-1 box-2"
         "box-3 box-5 box-2"
@@ -191,6 +191,7 @@ nav a:hover{
 
 @media(max-width: 42em){
     .grid-container{
+        grid-template-columns: repeat(2, 200px);
         grid-template-areas: 
         "box-1 box-2"
         "box-1 box-3"
