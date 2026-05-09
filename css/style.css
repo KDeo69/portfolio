@@ -111,6 +111,7 @@ nav a:hover{
 }
 
 .profilepic{
+    padding-left: 4%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,6 +239,8 @@ nav a:hover{
     border-radius: 40px;
 }
 
+/*techstack grid*/
+
 .techgrid{
     justify-content: center;
     display: grid;
@@ -247,4 +250,32 @@ nav a:hover{
     grid-template-areas: 
     "box-6 box-7"
     "box-8 box-9"
+}
+
+/*certifications grid*/
+
+.certgrid{
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 10em;
+    grid-template-areas: 
+    "box-10 box-11"
+    "box-12 box-12"
+}
+
+@media(max-width: 42em) {
+    .certgrid{
+        grid-template-columns: repeat(1, 200px);
+        grid-template-areas: 
+        "box-10"
+        "box-11"
+        "box-12"
+
+    }
+}
+
+.txtcenter{
+    text-align: center;
 }
