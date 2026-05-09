@@ -237,3 +237,14 @@ nav a:hover{
     width: 70%;
     border-radius: 40px;
 }
+
+.techgrid{
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 10em;
+    grid-template-areas: 
+    "box-6 box-7"
+    "box-8 box-9"
+}
