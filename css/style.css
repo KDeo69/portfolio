@@ -11,13 +11,71 @@
   }
   
 
-body{
-    font-family:Verdana;
-    background-color: #0b0617;
-    color: #f6f6f6;
-    min-height: 100vh;
-    line-height: 1.5;
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #100a1f;
+    color:#ffffff;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .image-gradient{
+    position:absolute;
+    top: 0;
+    right: 0;
+    opacity: 1.5;
+    z-index: -1;
 }
+
+.layer-blur{
+    height: 0;
+    width: 50rem;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    box-shadow: 0 0 900px 15px #ffffff;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+  canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: block;
+    }
+
+  .instruction {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    user-select: none;
+    pointer-events: none;
+    text-align: center;
+    z-index: 10;
+
+  }
+
+    header, main, section, nav {
+    position: relative;
+    z-index: 1;
+    }
+
+    header,.picandbento{
+    position: relative;
+    z-index: 1;
+}
+
 
 /*gradient*/
 
@@ -43,6 +101,7 @@ body{
 /*nav bar*/
 
 .container{
+    
     display: flexbox;
     width: 100%;
     margin: 0 auto;
