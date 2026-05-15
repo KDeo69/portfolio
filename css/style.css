@@ -21,25 +21,6 @@
     font-family: 'Segoe UI', sans-serif;
   }
 
-  .image-gradient{
-    position:absolute;
-    top: 0;
-    right: 0;
-    opacity: 1.5;
-    z-index: -1;
-}
-
-.layer-blur{
-    height: 0;
-    width: 50rem;
-    position: absolute;
-    top: 45%;
-    right: 10%;
-    box-shadow: 0 0 900px 15px #ffffff;
-    rotate: -30deg;
-    z-index: -1;
-}
-
   canvas{
     position: fixed;
     top: 0;
@@ -125,6 +106,10 @@ header{
     font-weight: 300;
 }
 
+.indexname{
+    margin-left: 10%;
+}
+
 
 /*navigation bar*/
 @media(max-width:56em){
@@ -132,12 +117,20 @@ header{
         font-size: 1.8rem;
         justify-content: center;
     }
+    .indexname{
+        align-content: center;
+    }
+    
+    
 }
 
 @media(max-width:40em){
     .namee{
         font-size: 1.6rem;
         justify-content: center;
+    }
+    .indexname{
+        align-content: center;
     }
 }
 
