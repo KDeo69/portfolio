@@ -48,6 +48,7 @@
     height: 100vh;
     z-index: 0;
     display: block;
+    pointer-events: none;
     }
 
   .instruction {
@@ -445,7 +446,7 @@ nav a:hover{
         "box-2";
     }
 
-    .box-5{
+    .box-2{
         display: none;
     }
 } 
