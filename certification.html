@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img class="image-gradient" height="800" width="5000" src="gradient.png" alt="gradient">
-    <div class="layer-blur"></div>
-
+        <canvas id="grid"></canvas>
+        <div class="instruction"></div>
+        <script src="script.js"></script>
     <header>
         <h3 class="archivo-black-regular namee">CERTIFICATIONS |   Kristoffer Deocareza</h3>
 
@@ -18,7 +18,6 @@
             <a href="about.html">ABOUT</a>
             <a href="certification.html">CERTIFICATION</a>
             <a href="techstack.html">TECHSTACK</a>
-            <a href="contact.html">CONTACT</a>
         </nav>
         <details class="dropdown mobile-nav">
             <summary class="button dropdown-trigger" aria-haspopup="true" aria-controls="mobile-menu">
@@ -31,7 +30,6 @@
                     <a href="about.html" class="dropdown-item">ABOUT</a>
                     <a href="certification.html" class="dropdown-item">CERTIFICATION</a>
                     <a href="techstack.html" class="dropdown-item">TECHSTACK</a>
-                    <a href="contact.html" class="dropdown-item">CONTACT</a>
                 </div>
             </div>
         </details>
@@ -45,22 +43,73 @@
 
     <div class="certgrid">
 
-        <figure class="image is-64x64 box-10">
+        <figure class="image is-64x64 box-10" id="box-10" style="cursor: pointer;">
           <h2 class="archivo-black-regular txtcenter">Python Essentials</h2>
             <img src="images/python-essentials-1.1.png" />
           </figure>
         
-        <figure class="image is-64x64 box-11">
+        <figure class="image is-64x64 box-11" id="box-11" style="cursor: pointer;">
           <h2 class="archivo-black-regular txtcenter">Networking</h2>
             <img src="images/networking-basics.png" />
           </figure>
 
-        <figure class="image is-64x64 box-12">
+        <figure class="image is-64x64 box-12" id="box-12" style="cursor: pointer;">
           <h2 class="archivo-black-regular txtcenter">Microsoft Office Word</h2>
             <img src="images/microsoft-office-specialist-word-associate-microsoft-365-apps.png" />
           </figure>
-        
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+
+        document.getElementById("box-10").addEventListener("click", () => {
+            Swal.fire({
+                title: "Python Essentials",
+                html: `
+                    <a href="https://www.credly.com/badges/d8a4859e-6f91-4467-8425-bc45ed11a3dd/public_url" target="_blank">
+                        <img 
+                            src="images/python-essentials-1.1.png"
+                            width="400"
+                            style="border-radius:10px; cursor:pointer;"
+                        >
+                    </a>
+                `
+            });
+        });
+
+        document.getElementById("box-11").addEventListener("click", () => {
+            Swal.fire({
+                title: "Networking Basics",
+                html: `
+                    <a href="https://www.credly.com/badges/0d7b6b0c-a79e-4d8c-8da8-83ddfdbaadca/public_url" target="_blank">
+                        <img 
+                            src="images/networking-basics.png"
+                            width="400"
+                            style="border-radius:10px; cursor:pointer;"
+                        >
+                    </a>
+                `
+            });
+        });
+
+        document.getElementById("box-12").addEventListener("click", () => {
+            Swal.fire({
+                title: "Microsoft Office Word",
+                html: `
+                    <a href="https://www.credly.com/badges/04654537-5b88-449b-8b86-f7bd6767037b/public_url" target="_blank">
+                        <img 
+                            src="images/microsoft-office-specialist-word-associate-microsoft-365-apps.png"
+                            width="400"
+                            style="border-radius:10px; cursor:pointer;"
+                        >
+                    </a>
+                `
+            });
+        });
+
+        </script>
         </div>
     
+    <script src="javascript/script.js"></script>
 </body>
 </html>
