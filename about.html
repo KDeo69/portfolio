@@ -15,16 +15,30 @@
     <div class="layer-blur"></div>
 
     <header>
-        <h1 class=""> ABOUT | Kristoffer Deocareza</h1>
+        <h3 class="archivo-black-regular namee"> ABOUT | Kristoffer Deocareza</h3>
 
-        <nav>
+        <nav class="desktop-nav">
             <a href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
             <a href="certification.html">CERTIFICATION</a>
             <a href="techstack.html">TECHSTACK</a>
             <a href="contact.html">CONTACT</a>
-
         </nav>
+        <details class="dropdown mobile-nav">
+            <summary class="button dropdown-trigger" aria-haspopup="true" aria-controls="mobile-menu">
+                <span>Menu</span>
+                <span class="icon is-small">&#x25BC;</span>
+            </summary>
+            <div class="dropdown-menu" id="mobile-menu" role="menu">
+                <div class="dropdown-content">
+                    <a href="index.html" class="dropdown-item">HOME</a>
+                    <a href="about.html" class="dropdown-item">ABOUT</a>
+                    <a href="certification.html" class="dropdown-item">CERTIFICATION</a>
+                    <a href="techstack.html" class="dropdown-item">TECHSTACK</a>
+                    <a href="contact.html" class="dropdown-item">CONTACT</a>
+                </div>
+            </div>
+        </details>
     </header>
 
     <br>

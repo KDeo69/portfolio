@@ -119,26 +119,25 @@ header{
     padding: 1rem 5rem;
 }
 
-header h1{
-    display: flex;
-    margin: 0;
-    font-size: 3rem;
+.namee{
+    font-size: 2rem;
     font-weight: 300;
 }
 
+
 /*navigation bar*/
 @media(max-width:56em){
-
+    .namee{
+        font-size: 1.8rem;
+        justify-content: center;
+    }
 }
 
-/*back button*/
-.navback{
-    display: flex;
-    padding: 1rem;
-    justify-content: flex-end;
-}
-button{
-    border-radius: 12px;
+@media(max-width:40em){
+    .namee{
+        font-size: 1.6rem;
+        justify-content: center;
+    }
 }
 
 nav{
@@ -160,7 +159,114 @@ nav a:hover{
     color:#3f2e67
 }
 
+.desktop-nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
 
+.mobile-nav{
+    display: none;
+    position: relative;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-trigger{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    background: #2c65b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    min-width: 12rem;
+}
+
+.dropdown-trigger:hover,
+.dropdown-trigger:focus{
+    background: #224f8d;
+}
+
+.dropdown-trigger:focus{
+    outline: none;
+}
+
+.dropdown.mobile-nav summary{
+    list-style: none;
+}
+
+.dropdown.mobile-nav summary::-webkit-details-marker{
+    display: none;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    background: #100a1f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    min-width: 14rem;
+    z-index: 2;
+}
+
+.dropdown[open] .dropdown-menu{
+    display: block;
+}
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-item{
+    display: block;
+    padding: 0.85rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item:hover{
+    background: rgba(255, 255, 255, 0.08);
+}
+
+@media(max-width:56em){
+    header{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: block;
+    }
+}
+
+@media(max-width:40em){
+    .dropdown-trigger{
+        width: 100%;
+    }
+
+    .dropdown-menu{
+        left: 0;
+        right: 0;
+        min-width: auto;
+    }
+}
 
 .picandbento{
     display: flex;
@@ -177,8 +283,8 @@ nav a:hover{
 }
 
 .profilepic img{
-    width: 512px;
-    height: 512px;
+    width: clamp(240px, 30vw, 512px);
+    height: clamp(240px, 30vw, 512px);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -259,32 +365,72 @@ nav a:hover{
     justify-content: end;
     padding-right: 4%;
     display: grid;
-    grid-auto-columns: 200px;
-    grid-auto-rows: 200px;
-    gap: 1em;
+    grid-auto-columns: clamp(120px, 12vw, 200px);
+    grid-auto-rows: clamp(120px, 12vw, 200px);
+    gap: clamp(0.5rem, 1.2vw, 1em);
     grid-template-areas: 
     "box-1 box-1 box-5 box-2"
     "box-4 box-3 box-3 box-2";
 }
 
+
 @media(max-width: 56em){
+    .picandbento{
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .profilepic{
+        padding-left: 0;
+    }
+
+    .profilepic img{
+        justify-content: center;
+        width: 320px;
+        height: 320px;
+        max-width: 90vw;
+    }
+
     .grid-container{
-        grid-template-columns: repeat(3, 200px);
+        justify-content: center;
+        grid-auto-columns: 200px;
+        grid-auto-rows: 200px;
+        width: 100%;
         grid-template-areas: 
         "box-1 box-1 box-2"
         "box-3 box-5 box-2"
         "box-3 box-4 box-4";
+        padding-bottom: 20px;
     }
 } 
 
 @media(max-width: 42em){
+    .picandbento{
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .profilepic img{
+        width: 240px;
+        height: 240px;
+    }
+
     .grid-container{
-        grid-template-columns: repeat(2, 200px);
+        width: 100%;
+        max-width: 420px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         grid-template-areas: 
-        "box-1 box-2"
-        "box-1 box-3"
-        "box-5 box-3"
-        "box-4 box-4";
+        "box-1"
+        "box-4"
+        "box-3"
+        "box-2"
+        "box-5";
+    }
+
+    .box-5{
+        display: none;
     }
 } 
 
