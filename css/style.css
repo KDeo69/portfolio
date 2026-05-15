@@ -436,6 +436,7 @@ nav a:hover{
     }
 
     .grid-container{
+        justify-content: center;
         width: 100%;
         max-width: 420px;
         grid-template-columns: repeat(1, minmax(0, 1fr));
